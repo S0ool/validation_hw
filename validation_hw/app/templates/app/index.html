@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    <p>{{ form.username }}</p>
+    {% for errors in form.username.errors %}
+    <p>{{ errors }}</p>
+    {% endfor %}
+    <p>{{ form.email }}</p>
+    {% for errors in form.email.errors %}
+    <p>{{ errors }}</p>
+    {% endfor %}
+    <p>{{ form.password1 }}</p>
+    {% for errors in form.password1.errors %}
+    <p>{{ errors }}</p>
+    {% endfor %}
+    <p>{{ form.password2 }}</p>
+    {% for errors in form.password2.errors %}
+    <p>{{ errors }}</p>
+    {% endfor %}
+<button>Создать</button>
+</form>
+
+</body>
+</html>
